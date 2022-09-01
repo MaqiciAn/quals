@@ -1,4 +1,28 @@
+h1{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
 Button{
     width: 100%;
+}
+
+.selectBoxButtons{
     margin-top: 22px !important;
+    background-color: #EE5FA6 !important;
+}
+
+#templateHeader{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.GridButton{
+    color: black !important;
+    border-color: #EE5FA6 !important;
+    border-radius: 40px !important;
+}
+
+.GridButton:hover{
+    background-color: pink !important;
 }

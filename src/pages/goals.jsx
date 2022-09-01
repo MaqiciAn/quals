@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import './goals.css';
 import Select from "react-select";
@@ -40,12 +40,55 @@ const SelectbleBoxs = () =>{
                     <Select isMulti options={options} isSearchable={true} />
                 </Grid>
                 <Grid item xs={3}>
-                    <Button color="secondary" variant="contained">Set Goal</Button>
+                    <Button className="selectBoxButtons" variant="contained">Set Goal</Button>
                 </Grid>
                 <Grid item xs={3}>
-                    <Button color="secondary" variant="contained">Publish Goal</Button>
+                    <Button className="selectBoxButtons" variant="contained">Publish Goal</Button>
                 </Grid>
             </Grid>
+        </>
+    );
+};
+
+const topics = [
+    {value:'animals',label:'Animals'},
+    {value:'fruits',label:'Fruits'},
+    {value:'shapes',label:'Shapes'},
+    {value:'vehicles',label:'Vehicles'},
+    {value:'tools',label:'Tools'},
+    {value:'jobs',label:'Jobs'},
+    {value:'tech',label:'Tech'},
+    {value:'science',label:'Science'},
+    {value:'movies',label:'Movies'},
+    {value:'films',label:'Films'},
+    {value:'food',label:'Food'},
+    {value:'places',label:'Places'},
+    {value:'journal',label:'Journal'},
+    {value:'story',label:'Story'},
+    {value:'cartoon',label:'Cartoon'},
+    {value:'nature',label:'Nature'},
+    {value:'holiday',label:'Holiday'},
+    {value:'future',label:'Future'},
+];
+
+const Ttemplates = () => {
+    const[isOpen,setIsOpen] = useState(true);
+    const toggle = () => setIsOpen(!isOpen);
+
+    const templates = topics.map(topic =>(
+        <Grid item xs={2}>
+            <Button className="GridButton" variant="outlined" onClick={toggle} style={{backgroundColor: isOpen? "white" : "pink"}}>{topic.label}</Button>
+        </Grid>
+    ));
+
+    return(
+        <>
+            <p id="templateHeader">Topic Templates</p>
+            <div>
+                <Grid container spacing={2}>
+                    {templates}
+                </Grid>
+            </div>
         </>
     );
 };
@@ -55,6 +98,7 @@ const Goals = () =>{
         <div>
             <h1>Goals</h1>
             <SelectbleBoxs />
+            <Ttemplates />
         </div>
     )
 }
