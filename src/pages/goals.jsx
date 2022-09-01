@@ -96,7 +96,7 @@ const Ttemplates = () => {
 const Goals = () =>{
     return(
         <div>
-            <h1>Goals</h1>
+            <h1 id="goals">Goals</h1>
             <SelectbleBoxs />
             <Ttemplates />
         </div>
