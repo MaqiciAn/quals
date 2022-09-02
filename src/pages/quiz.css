@@ -1,0 +1,22 @@
+#quizHeader{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#QuizGridContainer{
+    margin-top: 10px;
+}
+
+.quizInputs{
+    width: 100%;
+    height: 4vh;
+}
+
+.quizButtons{
+    margin-top: 20px !important;
+    background-color: #EE5FA6 !important;
+}
+
+#TopicsDiv{
+    margin-top: 40px;
+}
