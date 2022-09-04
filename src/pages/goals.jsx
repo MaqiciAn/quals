@@ -14,7 +14,7 @@ const options =[
 const SelectbleBoxs = () =>{
     return(
         <>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
                 <Grid item xs={3}>
                     <p>Class</p>
                     <Select isMulti options={options} isSearchable={true} />
@@ -85,7 +85,7 @@ const Ttemplates = () => {
         <>
             <p id="templateHeader">Topic Templates</p>
             <div>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
                     {templates}
                 </Grid>
             </div>
@@ -96,7 +96,7 @@ const Ttemplates = () => {
 const Goals = () =>{
     return(
         <div>
-            <h1 id="goals">Goals</h1>
+            <h1 id="goalsHeader">Goals</h1>
             <SelectbleBoxs />
             <Ttemplates />
         </div>

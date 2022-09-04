@@ -46,7 +46,7 @@ const topics = [
 const SelectBox = () =>{
     return(
         <>
-            <Grid id="QuizGridContainer" container spacing={3}>    
+            <Grid container spacing={3}>    
                 <Grid item xs={2}>
                     <p>New Quiz Name</p>
                     <input className="quizInputs" type="text" name="quizName"/>
