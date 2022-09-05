@@ -71,14 +71,22 @@ const topics = [
     {value:'future',label:'Future'},
 ];
 
-const Ttemplates = () => {
+const TopicButton = ({topic}) => {
     const[isOpen,setIsOpen] = useState(true);
-    const toggle = () => setIsOpen(!isOpen);
-
-    const templates = topics.map(topic =>(
+    const toggle = () =>{
+        setIsOpen(!isOpen);
+        topic.isSelected=!isOpen;
+    };
+    return(
         <Grid item xs={2}>
             <Button className="GridButton" variant="outlined" onClick={toggle} style={{backgroundColor: isOpen? "white" : "pink"}}>{topic.label}</Button>
         </Grid>
+    );
+};
+
+const Ttemplates = () => {
+    const templates = topics.map(topic =>(
+        <TopicButton topic={topic} />
     ));
 
     return(
